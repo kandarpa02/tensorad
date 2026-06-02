@@ -6,7 +6,7 @@ class DType:
         self.name = base.__str__()
 
     def __repr__(self):
-        return "fxnet."+f"{self.name}".removeprefix('torch.')
+        return f"{self.name}".removeprefix('torch.')
     
     __str__ = __repr__
 
@@ -32,4 +32,4 @@ def dtype_f(dt):
     if isinstance(dt, (int, float, complex)):
         return dt
     return dt
-    
+

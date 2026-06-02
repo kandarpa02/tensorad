@@ -130,7 +130,7 @@ class Texor(torch.Tensor):
     def astype(self, dtype:DTypeLike): return Texor(self, dtype_f(dtype))
 
     @property
-    def dtype(self): DType(self._tensor.dtype)
+    def dtype(self): return DType(self._tensor.dtype)
 
     def __array__(self, dtype=None):
         arr = (

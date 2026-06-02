@@ -7,7 +7,7 @@ import torch
 TensorLike = Tensor|np.ndarray|int|float|complex
 DEVICE = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
 
-def constant(data:TensorLike, dtype:DTypeLike|None=None, device=None):
+def tensor(data:TensorLike, dtype:DTypeLike|None=None, device=None):
     from .tensor_base import Texor
     return Texor(data, dtype=dtype_f(dtype), device=device)
 
@@ -18,5 +18,5 @@ __all__ = [
     'ones_like',
     'full',
     'full_like',
-    'constant'
+    'tensor'
 ]
